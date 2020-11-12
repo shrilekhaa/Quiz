@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import questions from './questions.js';
-import { Question } from './Question';
-import { Result } from './Result';
+import { Question } from './components/Question';
+import { Result } from './components/Result';
 
 export default function App() {
   const [showScore, setShowScore] = useState(false);
@@ -42,10 +42,10 @@ export default function App() {
             showScore={showScore}
           />
         ))}
-        <hr></hr>
-        <button className="result-button" onClick={handleClick}>
+        <br/>
+        <center><button className="result-button" onClick={handleClick}>
           Get Result!
-        </button>
+        </button></center>
         <Result showScore={showScore} missNum={missNum} score={score} questions={questions} />
       </div>
     </div>

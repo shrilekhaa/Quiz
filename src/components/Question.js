@@ -6,7 +6,7 @@ export const Question = ({ question, handleAnswerOptionClick, changeSelected, sh
       <div className="question-segment">
         <div className="question-count">
           <span className="set-color">
-            <b style={{ color: showScore && question.selected === '' ? 'yellow' : '' }}>QUESTION {question.id + 1}</b>
+            <b style={{ color: showScore && question.selected === '' ? 'red' : '' }}>QUESTION {question.id + 1}</b>
           </span>
         </div>
         <div className="question-text">
@@ -21,7 +21,7 @@ export const Question = ({ question, handleAnswerOptionClick, changeSelected, sh
               handleAnswerOptionClick(answerOption.isCorrect, question.id, answerOption.id, answerOption.answerText);
               changeSelected(question.id, answerOption.answerText);
             }}
-            style={{ backgroundColor: question.selected === answerOption.answerText ? 'green' : '' }}
+            style={{ backgroundColor: question.selected === answerOption.answerText ? '#794c74' : '' }}
           >
             <span>{answerOption.answerText}</span>
           </button>
